@@ -40,7 +40,7 @@ const ImageSelector = ({onImage}) => {
     <View style={styles.container}>
       <View style={styles.preview}>
         {!pickerResponse ? (
-          <Text>No hay una imagen seleccionada</Text>
+          <Text style={styles.text}>No hay una imagen seleccionada</Text>
         ) : (
           <Image style={styles.image} source={{uri: pickerResponse.uri}} />
         )}
@@ -66,6 +66,9 @@ const styles = StyleSheet.create({
     alignContent: 'center',
     borderColor: COLORS.BLUSH,
     borderWidth: 1,
+  },
+  text: {
+    textAlign: 'center',
   },
   image: {
     width: '100%',
